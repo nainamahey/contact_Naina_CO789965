@@ -8,13 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nency.contact.R;
-import com.nency.contact.dashboard.OnItemClickListener;
-import com.nency.contact.room.Contact;
+
+import com.example.contact_naina_co789965.R;
 
 import java.util.ArrayList;
 
-public class NaiContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
+import dashboard.OnItemClickListener;
+import room.Contact;
+
+public class NaiContactAdapter extends RecyclerView.Adapter<NaiContactAdapter.ViewHolder> {
 
     private ArrayList<Contact> contacts;
     private OnItemClickListener onItemClickListener;
@@ -41,14 +43,14 @@ public class NaiContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewH
 
     @NonNull
     @Override
-    public ContactAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public NaiContactAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_contacts, parent, false);
         return new ViewHolder(v, onItemClickListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NaiContactAdapter.ViewHolder holder, int position) {
         Contact contact = contacts.get(position);
         holder.id = contact.getId();
         holder.firstName.setText(contact.getFirstName() + " " + contact.getLastName());

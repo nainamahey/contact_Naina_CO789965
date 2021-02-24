@@ -7,9 +7,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nency.C0789965.R;
-import com.nency.C0789965.room.Contact;
-import com.nency.C0789965.room.ContactRoomDatabase;
+import com.example.contact_naina_co789965.R;
+
+import room.Contact;
+import room.ContactRoomDatabase;
+
 
 public class ContactDetailActivity extends AppCompatActivity {
 

@@ -12,13 +12,14 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nency.C0789965.R;
-import com.nency.C0789965.adapter.ContactAdapter;
-import com.nency.C0789965.detail.ContactDetailActivity;
-import com.nency.C0789965.room.Contact;
-import com.nency.C0789965.room.ContactRoomDatabase;
+import com.example.contact_naina_co789965.R;
 
 import java.util.ArrayList;
+
+import adapter.NaiContactAdapter;
+import detail.ContactDetailActivity;
+import room.Contact;
+import room.ContactRoomDatabase;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        myAdapter = new ContactAdapter(filterContacts, this);
+        myAdapter = new NaiContactAdapter(filterContacts, this);
         recyclerView.setAdapter(myAdapter);
 
         Button addNew = findViewById(R.id.addNew);
